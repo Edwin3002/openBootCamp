@@ -12,8 +12,9 @@ class Vehiculo {
 
     public boolean compruebaMatricula(String matricula){
         if(matricula == "XXX"){
-            return false;
+            return true;
         }
+        return false;
     }
 }
 
