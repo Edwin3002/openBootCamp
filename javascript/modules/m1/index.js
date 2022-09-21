@@ -12,10 +12,17 @@
 
 // - Modifica el último console.log del entrypoint index.js para devolver el resultado en color verde
 
-
-import { multipli, suma } from "./controlles";
+import chalk from 'chalk';
+import { multipli, suma } from "./controlles.js";
 
 const sum = suma(1, 5)
 const mul = multipli(4, 5)
 
-console.log(sum, mul);
+const log = console.log;
+
+
+// Combine styled and normal strings
+log(chalk.blue(sum)  + chalk.red(mul));
+
+// Compose multiple styles using the chainable API
+log(chalk.blue.bgRed.bold(mul));
