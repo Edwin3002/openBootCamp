@@ -15,7 +15,7 @@
 import chalk from 'chalk';
 import { multipli, suma } from "./controlles.js";
 
-const sum = suma(1, 5)
+const sum = suma(1, 2)
 const mul = multipli(4, 5)
 
 const log = console.log;
