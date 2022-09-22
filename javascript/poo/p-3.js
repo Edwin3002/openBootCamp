@@ -8,10 +8,16 @@ class Person {
     #adios(){
         console.log(`bye there`);
     }
-    //publico
     saludo(){
         console.log(`hello there, i am ${this.name} and i have ${this.age}`);
     }
+    getName(){
+        return this.#name
+    }
+    setName(newName){
+         this.#name = newName
+    }
+    //publico   // (SET)   nos permite acceder a atributos protegidos this.#name
     saludo2(){
         console.log(`hello there, i am ${this.#name} and i have ${this.age}`);
     }
@@ -23,3 +29,8 @@ console.log(per.age);
 per.saludo()
 per.saludo2()
 // per.adios()
+
+
+
+// set cambiar el valor de atributos protegidos
+// get obtener el valor de atributos protegidos
