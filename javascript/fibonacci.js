@@ -7,10 +7,20 @@
 
 function fibo(num){
     let x = 0
+    let z = []
     for (let index = 0; index < num; index++) {
-        console.log(x);
+        x = index
+        if (z[2]) {
+            z.push(z[z.length-1] +z[z.length-2])
+        }else if(z[1]){
+
+            z.push(1)
+        }else{
+            z.push(x)
+        }
+        console.log(z);
     }
 }
 // 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55…
 
-fibo(6)
+fibo(11)
