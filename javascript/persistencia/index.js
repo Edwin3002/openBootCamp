@@ -33,6 +33,7 @@
 // - Observa cómo la cookie sigue manteniendo el objeto que has almacenado antes, aunque ya está caducado
 let name = 'ed'
 let lastName = 'vargas'
+const now = new Date()
 localStorage.setItem('name', name + ' ' + lastName)
 sessionStorage.setItem('name', name + ' ' + lastName)
-document.cookie = (`person=${name + ' ' + lastName}; expires `)
+document.cookie = `datos=paco;expires=${new Date(2024, 01, 01)}`
